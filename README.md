@@ -33,19 +33,13 @@ Modifiez le fichier si besoin afin qu'il corresponde à votre environnement loca
 docker-compose up -d
 ```
 
-### 4. Générer le Prisma Client
-
-```bash
-npm run prisma:generate
-```
-
-### 5. Appliquer la migration
+### 4. Appliquer la migration
 
 ```bash
 npm run prisma:migrate
 ```
 
-### 6. Démarrer l’application
+### 5. Démarrer l’application
 
 ```bash
 npm run start:dev
@@ -59,21 +53,13 @@ Pour visualiser, créer et manipuler les données, vous pouvez utiliser Prisma S
 npm run prisma:studio
 ```
 
-## Concernant le test des endpoints
+## Swagger
 
-Le projet ne comprend pas d’interface utilisateur.
-Vous êtes libre d'utiliser l’outil de votre choix pour tester les endpoints :
+Une documentation est disponible via Swagger à l’adresse suivante :
 
-* [Postman](https://www.postman.com/)
-* [Insomnia](https://insomnia.rest/)
-* `curl` ou tout autre client HTTP
+➡️ http://localhost:3000/api
 
-Nous vous demandons de renseigner dans le README du rendu une section décrivant les endpoints que vous avez créés, ainsi que des exemples de requêtes (payloads JSON, paramètres, etc.) dans le but de faciliter la revue.
+Nous vous demandons **d’enrichir la documentation Swagger** des endpoints que vous implémentez dans le cadre de ce test technique.
 
 ## Rappel
-Votre rendu sera évalué selon les critères suivants :
-* La qualité de la modélisation des données.
-* Le respect précis des règles métier propres aux virements bancaires.
-* La bonne gestion de l’atomicité et des conditions de concurrence (race conditions).
-* La clarté, la rigueur et la conformité du code aux bonnes pratiques.
-* La pertinence et la lisibilité des explications fournies dans le README (raisonnements techniques, arbitrages, choix d’architecture, etc.).
+L'énoncé du test technique est disponible [ici.](https://blankapp.notion.site/test-technique)

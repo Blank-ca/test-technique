@@ -8,7 +8,7 @@ export class AccountService {
     const account = await this.accountRepository.getById(id);
 
     if (!account) {
-      throw new NotFoundException(`Account with ID ${id} not found`);
+      throw new NotFoundException(`Account with ID ${id} not found.`);
     }
 
     return account;
