@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import importPlugin from 'eslint-plugin-import';
 
 export default tseslint.config(
   {
@@ -24,7 +25,26 @@ export default tseslint.config(
     },
   },
   {
+    plugins: {
+      import: importPlugin,
+    },
     rules: {
+      'import/order': [
+        'error',
+        {
+          'newlines-between': 'never',
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+            'object',
+            'type',
+          ],
+        },
+      ],
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn'

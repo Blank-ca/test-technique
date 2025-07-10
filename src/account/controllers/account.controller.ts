@@ -1,6 +1,6 @@
 import { Controller, Get, Param, ParseUUIDPipe } from '@nestjs/common';
-import { AccountService } from '../services/account.service';
 import { ApiOperation, ApiParam, ApiResponse } from '@nestjs/swagger';
+import { AccountService } from '../services/account.service';
 
 @Controller('accounts')
 export class AccountController {
